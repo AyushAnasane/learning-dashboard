@@ -19,11 +19,9 @@ export default async function DashboardPage() {
                         <div className="md:col-span-2">
                             <HeroTile userName="Alex" streakDays={12} />
                         </div>
-
                         <div className="md:col-span-2">
                             <ActivityTile />
                         </div>
-
                         <div className="lg:col-span-4">
                             <div className="mb-4">
                                 <h2 className="text-xl font-semibold text-white mb-2">Continue Learning</h2>

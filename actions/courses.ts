@@ -4,7 +4,7 @@ import { createSupabaseServerClient } from '@/lib/supabase/server';
 import { Course } from '@/types';
 
 export async function fetchCourses(): Promise<Course[]> {
-    const supabase = await createSupabaseServerClient(); // Added 'await'
+    const supabase = await createSupabaseServerClient();
     const { data, error } = await supabase
         .from('courses')
         .select('*')
