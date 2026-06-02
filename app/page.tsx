@@ -17,7 +17,7 @@ export default async function DashboardPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-min">
             <div className="md:col-span-2">
-              <HeroTile userName="Alex" streakDays={12} />
+              <HeroTile userName="Ayush" streakDays={12} />
             </div>
 
             <div className="md:col-span-2">
