@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import * as Icons from 'lucide-react';
-import { Course } from '@/types';
+import { Course } from '@/lib/types';
 
 interface CourseCardProps {
     course: Course;

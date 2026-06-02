@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Course } from '@/types';
+import { Course } from '@/lib/types';
 import { CourseCard } from './CourseCard';
 
 interface CoursesGridProps {
