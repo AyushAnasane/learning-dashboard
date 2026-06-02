@@ -2,7 +2,6 @@
 
 import { createSupabaseServerClient } from '@/lib/supabase/server';
 
-// Define Course interface here directly (instead of importing from @/types)
 export interface Course {
     id: string;
     title: string;
