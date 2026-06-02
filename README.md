@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next-Gen Learning Dashboard
 
-## Getting Started
+A futuristic student dashboard with bento grid layout, real-time course data from Supabase, Framer Motion animations, and full responsiveness.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[View live dashboard](https://learning-dashboard-smoky.vercel.app/dashboard)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js 15 (App Router)
+- Supabase (PostgreSQL)
+- Tailwind CSS v3
+- Framer Motion
+- Lucide React
+- TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Architecture
 
-## Learn More
+- **Server Components**: Data fetching via Server Actions (`fetchCourses`). Async Supabase client with `cookies()`.
+- **Client Components**: Sidebar, bottom navigation, animated tiles, progress bars, and responsive provider.
+- **Animations**: Staggered entrance, spring hover effects, layoutId sidebar highlight, animated progress bars.
+- **Responsive**: Desktop (sidebar expanded), tablet (collapsed to icons), mobile (bottom navigation).
 
-To learn more about Next.js, take a look at the following resources:
+## Challenges
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Downgraded Tailwind from v4 to v3 due to `@apply` incompatibility.
+- Fixed DNS resolution for Supabase by switching to Google DNS.
+- Updated Supabase SSR client to use async `cookies()` with `getAll`/`setAll`.
+- Standardised imports to `@/` alias to avoid module resolution errors.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Local Setup
 
-## Deploy on Vercel
+1. Clone the repo
+2. `npm install`
+3. Copy `.env.example` to `.env.local` and add your Supabase URL and anon key
+4. `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Environment Variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
