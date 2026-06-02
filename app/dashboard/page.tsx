@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { fetchCourses } from '@/actions/courses';
 import { HeroTile } from '@/components/HeroTile';
 import { CoursesGrid } from '@/components/CoursesGrid';
