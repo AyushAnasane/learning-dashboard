@@ -21,9 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <SidebarProvider>
-          <div className="flex">
+          <div className="flex min-h-screen">
             <Sidebar />
-            <main className="flex-1 min-h-screen transition-all duration-300">
+            <main className="flex-1 ml-0 md:ml-20 lg:ml-64 transition-all duration-300">
               {children}
             </main>
             <BottomNav />
