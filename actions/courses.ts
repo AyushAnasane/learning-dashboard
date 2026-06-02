@@ -1,7 +1,15 @@
 'use server';
 
 import { createSupabaseServerClient } from '@/lib/supabase/server';
-import { Course } from '@/types';
+
+// Define Course interface here directly (instead of importing from @/types)
+export interface Course {
+    id: string;
+    title: string;
+    progress: number;
+    icon_name: string;
+    created_at: string;
+}
 
 export async function fetchCourses(): Promise<Course[]> {
     const supabase = await createSupabaseServerClient();
